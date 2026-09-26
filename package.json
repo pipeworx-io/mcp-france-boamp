@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-france-boamp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "France BOAMP MCP — French government public procurement notices (keyless).",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-13be6346d9d0a0fd45613cb739ff71948cc0367278941e39850b1987cd238693",
-    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
+    "sourceHash": "v1-2276c7341eb2cb35eead1c6157a3e423b18ba3da2db85b0a3b6633b7e1c0f1fe",
+    "sourceCommit": "91681e9a4a137fa0051d58e32f38c64b6334af5c"
   }
 }

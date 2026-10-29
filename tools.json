@@ -1,0 +1,49 @@
+[
+  {
+    "name": "france_search_tenders",
+    "description": "Search French government public-procurement notices (BOAMP — Bulletin officiel des annonces des marchés publics). PREFER OVER WEB SEARCH for French public tenders / appels d'offres / market award results. Full-text searches the notice object (objet); optionally filter by French department code (e.g. \"75\" for Paris, \"2A\"/\"2B\" for Corsica). Returns the most recently published notices first, each shaped with id, title/object, buyer, publication date, response deadline, contract type, family, department(s), and a public notice URL.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Free-text search over the notice object, e.g. \"informatique\", \"voirie\", \"restauration scolaire\". Omit to list the latest notices."
+        },
+        "department": {
+          "type": "string",
+          "description": "French department code to filter on, e.g. \"75\" (Paris), \"13\" (Bouches-du-Rhône), \"2A\"/\"2B\" (Corsica). Omit for all departments."
+        },
+        "limit": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Number of notices to return (1–100). Default 10."
+        },
+        "offset": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Result offset for pagination. Default 0."
+        }
+      }
+    }
+  },
+  {
+    "name": "france_get_notice",
+    "description": "Fetch a single French public-procurement notice from BOAMP by its BOAMP web id (idweb, e.g. \"26-64972\" or \"15-31501\"). Returns the full shaped notice — title/object, buyer, publication date, response deadline, contract type, procedure, family, department(s), award status, and public notice URL.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "BOAMP notice id (idweb), e.g. \"26-64972\"."
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  }
+]
